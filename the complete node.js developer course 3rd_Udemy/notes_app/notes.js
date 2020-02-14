@@ -24,16 +24,9 @@ const addNote = function(title, body){
 const removeNote = function(title){
     const notes = loadNotes()
     const remainNotes = notes.filter(function(note){
-        return note.title === title
+        return note.title !== title
     })
-    if (remainNotes.length === 0){
-        saveNotes(notes)
-        console.log('Note does not exist!')
-    } else {
-        notes.splice(notes.indexOf(remainNotes[0]),1)
-        saveNotes(notes)
-        console.log('Note removed!')
-    }    
+    saveNotes(remainNotes)
 }
 
 
