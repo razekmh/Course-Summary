@@ -1,7 +1,6 @@
 const fs = require ('fs')
 const chalk = require('chalk')
 
-debugger
 
 const addNote = (title, body) => {
     const notes = loadNotes()
