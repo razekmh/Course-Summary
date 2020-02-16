@@ -10,9 +10,10 @@ const gecode = (address, callback) => {
             longitude: 0
         }
 
-        return data
+        callback(data) 
     }, 2000)
 }
 
-const data = gecode('city')
-console.log(data)
+gecode('city', (collected) => {
+    console.log(collected)
+})
