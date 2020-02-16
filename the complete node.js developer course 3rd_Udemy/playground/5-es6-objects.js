@@ -19,6 +19,11 @@ const product = {
     sales: undefined
 }
 
-const {label, stock} = product
+const {label: productLable, stock, rating = 5} = product
+console.log(productLable, stock, rating)
 
-console.log(label, stock)
+const transaction = (type, {label, stock}) => {
+    console.log(type, label,stock)
+}
+
+transaction('order', product)
