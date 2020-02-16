@@ -21,6 +21,8 @@ request({url: weatherUrl, json:true}, (error, response)=> {
         console.log('Unable to connect to location service!')
     } else if (response.body.features.length === 0) {
         console.log("No match found!")
+    } else if (){
+
     } else {
         console.log(response.body.features[0].center[0] , response.body.features[0].center[1])
     }
