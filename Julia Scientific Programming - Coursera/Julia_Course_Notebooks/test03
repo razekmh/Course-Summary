@@ -1,0 +1,4 @@
+diagsum = 0
+for k = 1:2
+  diagsum = diagsum + newvar[k,k]
+end
